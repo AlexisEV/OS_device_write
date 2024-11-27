@@ -124,7 +124,6 @@ static ssize_t device_read(struct file *filp, /* see include/linux/fs.h */
 static ssize_t device_write(struct file *filp, const char *buff, size_t len, loff_t *off)
 {
     size_t max_length = BUF_LEN - 1;
-    //size_t bytes_to_copy = len < max_length ? len : max_length;
     size_t bytes_to_copy;
     if(len<max_length) {
       bytes_to_copy = len;
